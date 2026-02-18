@@ -1,0 +1,197 @@
+/* Statistics.css */
+
+.statistics {
+  background: white;
+  padding: 2rem;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.statistics h2 {
+  color: var(--dark-color);
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.statistics h3 {
+  color: var(--dark-color);
+  margin: 2rem 0 1.5rem 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.no-data {
+  color: #95a5a6;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  max-height: 2.5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+/* Grade Distribution */
+.grade-distribution {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.distribution-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.grade-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grade-label {
+  font-weight: 600;
+  min-width: 40px;
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--dark-color);
+}
+
+.bar-container {
+  flex: 1;
+  height: 30px;
+  background: #ecf0f1;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 0.5rem;
+  transition: width 0.3s ease;
+  min-width: 2px;
+}
+
+.bar.grade-A {
+  background: #27ae60;
+}
+
+.bar.grade-B {
+  background: #2980b9;
+}
+
+.bar.grade-C {
+  background: #f39c12;
+}
+
+.bar.grade-D {
+  background: #e74c3c;
+}
+
+.bar.grade-F {
+  background: #c0392b;
+}
+
+.grade-count {
+  min-width: 40px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark-color);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .statistics {
+    padding: 1.5rem;
+  }
+
+  .statistics h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .statistics h3 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0 1rem 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem;
+  }
+
+  .stat-value {
+    font-size: 1.75rem;
+  }
+
+  .grade-distribution {
+    padding: 1rem;
+  }
+
+  .distribution-bars {
+    gap: 1rem;
+  }
+
+  .grade-bar {
+    gap: 0.75rem;
+  }
+
+  .grade-label,
+  .grade-count {
+    min-width: 30px;
+    font-size: 0.9rem;
+  }
+
+  .bar-container {
+    height: 25px;
+  }
+}
